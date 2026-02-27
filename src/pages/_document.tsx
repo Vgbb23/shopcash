@@ -10,14 +10,18 @@ export default function Document() {
           id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
-        <script>
-          window.pixelId = "69a1289bb4defac9aadd33d0";
-          var a = document.createElement("script");
-          a.setAttribute("async", "");
-          a.setAttribute("defer", "");
-          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-          document.head.appendChild(a);
-        </script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.pixelId = "69a1289bb4defac9aadd33d0";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+              document.head.appendChild(a);
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />
